@@ -1,0 +1,100 @@
+:root {
+   --title-color: #65617b;
+   --subtitle-color: #2a3a59;
+}
+
+.teste {
+   width: 50%;
+}
+
+/* ================> ABOUT US <================ */
+#about-us {
+   display: flex;
+   align-items: center;
+   column-gap: 3rem;
+   margin-top: 4rem;
+   margin-bottom: 5rem;
+}
+
+#about-us h1 {
+   font-size: 3rem;
+   color: var(--title-color);
+}
+
+#about-us span {
+   color: #3ab67d;
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+
+#about-us p {
+   line-height: 1.5;
+   margin-top: 1rem;
+}
+/* ====================> REASONS <================== */
+#reasons {
+   margin: 3rem 0;
+}
+
+#reasons h2 {
+   font-size: 2rem;
+   color: var(--subtitle-color);
+}
+
+.list-of-reasons {
+   display: flex;
+   flex-wrap: wrap;
+   row-gap: 0.5rem;
+   list-style: none;
+   font-weight: bold;
+   color: #65617b;
+   margin-top: 1rem;
+}
+
+.list-of-reasons li {
+   border-top: 4px solid #65617b;
+   width: 200px;
+}
+
+.list-of-reasons li:not(:last-child) {
+   margin-right: 20px;
+}
+
+.list-of-reasons span {
+   display: block;
+   margin: 1rem 0;
+}
+
+/* ============> GOALS <================ */
+#goals {
+   display: flex;
+   align-items: center;
+   column-gap: 3rem;
+   margin: 3rem 0;
+   line-height: 1.5;
+}
+
+#goals article {
+   width: 50%;
+}
+
+#goals h2 {
+   font-size: 2rem;
+   color: var(--subtitle-color);
+}
+
+#goals img {
+   height: 400px;
+}
+
+/* ================> FOOTER <============== */
+footer {
+   height: 30vh;
+   background: #5b8f7d;
+   text-align: center;
+   margin-top: 5rem;
+}
+
+footer p {
+   color: #fff;
+}
