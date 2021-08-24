@@ -150,7 +150,7 @@ header ul img {
       flex-direction: column;
       position: fixed;
       top: 0;
-      right: 0;
+      left: 0;
       row-gap: 3rem;
       background: #fff;
       width: 100vw;

@@ -64,8 +64,12 @@
       flex-grow: 1;
    }
 
-   .component-feedback {
-      width: 100%;
+   .component-item span {
+      font-size: .5rem;
+   }
+
+   .instructions-description li {
+      width: 80%;
    }
 
    #intro-video > div {
