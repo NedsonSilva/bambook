@@ -1,0 +1,82 @@
+@media screen and (max-width: 1100px) {
+   p {
+      font-size: 0.75rem;
+   }
+
+   #introdution {
+      flex-direction: column;
+   }
+
+   #introdution > div {
+      width: 100%;
+   }
+
+   .intro-description div {
+      display: flex;
+      margin-bottom: 1rem;
+   }
+
+   .create-account,
+   .log-in {
+      padding: 1rem 2rem;
+      font-size: 12px;
+      width: max-content;
+   }
+
+   #instructions {
+      flex-direction: column-reverse;
+      row-gap: 4rem;
+   }
+
+   .instructions-description {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 1rem;
+   }
+
+   .component-feedback {
+      margin-bottom: 4rem;
+   }
+
+   .component-item::before {
+      display: none;
+   }
+
+   #downloading-app {
+      flex-direction: column;
+   }
+
+   #downloading-app > div {
+      row-gap: 1.5rem;
+   }
+
+   #downloading-app > img {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .create-account {
+      flex-grow: 2;
+   }
+
+   .log-in {
+      flex-grow: 1;
+   }
+
+   .component-feedback {
+      width: 100%;
+   }
+
+   #intro-video > div {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .video {
+      display: block;
+      width: 95%;
+      height: 200px;
+      border-radius: 20px;
+   }
+}

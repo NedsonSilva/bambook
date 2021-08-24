@@ -31,12 +31,13 @@ main {
 }
 
 header,
-header nav,
-header ul {
+header ul,
+.wrapper {
    display: flex;
    align-items: center;
    list-style: none;
 }
+
 /* ====================> MENU <===================== */
 header {
    justify-content: space-between;
@@ -44,36 +45,148 @@ header {
 
 header a {
    color: var(--link-color);
+   min-width: 80px;
 }
 
-.social-networks {
-   transform: translateX(50%);
+header nav {
+   width: 60%;
 }
 
 .social-networks li {
    margin: 0 0.625rem;
 }
 
+.menu {
+   margin-left: auto;
+}
+
 .menu li {
    margin: 0 1.2rem;
+   text-align: center;
    position: relative;
 }
 
-.menu li::after {
+.menu a {
+   width: 100%;
+}
+
+.menu a::after {
    content: '';
    display: block;
    position: absolute;
    height: 2px;
    width: 0;
-   margin-top: .5rem;
+   margin-top: 0.3rem;
    background: var(--link-color);
-   transition: width .4s;
+   opacity: 0;
+   transition: 0.3s;
 }
 
-.menu li:hover::after {
+.menu a:hover::after {
    width: 80%;
+   opacity: 1;
 }
 
 header ul img {
    vertical-align: middle;
+}
+
+/* ==============> ICON MENU HAMBURGUER <============== */
+#hamburguer {
+   display: none;
+   position: relative;
+   width: 35px;
+   height: 40px;
+   border-top: 2px solid #3ab67d;
+   margin: 5px;
+   cursor: pointer;
+   transform: translateY(25%);
+   transition: 0.3s;
+   z-index: 10;
+}
+
+#hamburguer.animate {
+   border-top-color: transparent;
+}
+
+#hamburguer::after,
+#hamburguer::before {
+   content: '';
+   display: block;
+   position: relative;
+   width: 35px;
+   height: 2px;
+   background: #3ab67d;
+   margin-top: 7px;
+   transition: 0.3s;
+}
+
+#hamburguer.animate::after {
+   transform: rotate(135deg);
+   top: -9px;
+}
+
+#hamburguer.animate::before {
+   margin-top: 10px;
+   transform: rotate(45deg);
+}
+
+/* ===============> RESPONSIVE <=============== */
+@media screen and (max-width: 1100px) {
+   header,
+   main {
+      margin: 1rem;
+   }
+
+   header nav {
+      width: auto;
+   }
+
+   #hamburguer {
+      display: block;
+   }
+
+   .wrapper {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      row-gap: 3rem;
+      background: #fff;
+      width: 100vw;
+      height: 100vh;
+      padding: 4rem 0;
+      transform: translateX(50%) scaleX(0);
+      transition: 0.3s;
+      z-index: 2;
+   }
+
+   .wrapper.active {
+      transform: translateX(0) scaleX(1);
+   }
+
+   .menu {
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 2rem;
+      width: 100vw;
+      height: 100vh;
+      padding: 4rem 0;
+      font-size: 1.125rem;
+      order: -1;
+   }
+
+   .menu li,
+   .menu a {
+      display: block;
+      width: 100%;
+   }
+
+   .menu a {
+      padding: 0.5rem 0;
+   }
+
+   .menu a::after {
+      display: none;
+   }
 }

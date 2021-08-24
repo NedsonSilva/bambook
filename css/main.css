@@ -6,6 +6,13 @@
    --paraghaph-color: #8a879d;
    --paraghaph-disable: #d2d1dc;
 }
+
+/* ==============> TITLES <=================== */
+#downloading-app h2,
+.intro-description h1 {
+   font-size: min(6.5vw, 1.5rem);
+}
+
 /* =====================> INTRO <================== */
 #introdution {
    display: flex;
@@ -23,12 +30,11 @@
 
 .intro-description h3 {
    color: var(--link-color);
-   font-size: 1.5rem;
+   font-size: min(4vw, 1.5rem);
 }
 
 .intro-description h1 {
    color: var(--title-color);
-   font-size: 3rem;
 }
 
 .intro-description p {
@@ -46,6 +52,7 @@
    border-radius: 10px;
    color: white;
    font-weight: 500;
+   text-align: center;
 }
 
 .create-account {
@@ -87,11 +94,10 @@
    display: flex;
    justify-content: space-between;
    min-height: 50vh;
-   column-gap: 10rem;
+   column-gap: 5rem;
 }
 
 .component-feedback {
-   width: 80%;
    height: max-content;
    padding: 1rem 1.5rem;
    box-shadow: 10px 10px 20px rgba(192, 197, 233, 0.6);
@@ -105,6 +111,7 @@
    align-items: center;
    margin-bottom: 1rem;
    position: relative;
+   width: 400px;
 }
 
 .component-item img {
@@ -129,23 +136,20 @@
    z-index: -1;
 }
 
-#instructions ol {
+.instructions-description {
    display: flex;
    list-style: none;
    font-weight: bold;
    color: #65617b;
+   column-gap: 1rem;
 }
 
-#instructions ol li {
+.instructions-description li {
    border-top: 4px solid #65617b;
    width: 200px;
 }
 
-#instructions ol li:not(:last-child) {
-   margin-right: 20px;
-}
-
-#instructions span {
+.instructions-description span {
    display: block;
    margin: 1rem 0;
 }
@@ -178,7 +182,6 @@
 }
 
 #downloading-app h2 {
-   font-size: 3rem;
    color: var(--title-color);
 }
 
@@ -201,7 +204,7 @@
 }
 
 #bambook-services > h2 {
-   font-size: 48px;
+   font-size: min(6.5vw, 48px);
    color: var(--title-color);
 }
 
@@ -264,13 +267,14 @@
 }
 
 #intro-video h2 {
-   font-size: 48px;
+   font-size: min(6.5vw, 48px);
    margin-bottom: 3rem;
+   color: rgb(70, 70, 75);
 }
 
 #intro-video > div {
    display: flex;
-   background: #fff;
+   justify-content: space-between;
    box-shadow: 10px 10px 20px rgba(192, 197, 233, 0.6);
    border-radius: 20px;
    overflow: hidden;
@@ -284,23 +288,6 @@
 
 #intro-video p:not(:first-child) {
    color: var(--paraghaph-disable);
-}
-
-.video {
-   display: block;
-   min-height: 100%;
-   width: 80%;
-   background: url('../assets/image/video-img.svg');
-   position: relative;
-}
-
-.video::before {
-   content: url('../assets/image/icons/play-video.svg');
-   display: block;
-   position: absolute;
-   inset: 50%;
-   transform: translateY(-20px);
-   cursor: pointer;
 }
 
 /* ================> FOOTER <============== */
